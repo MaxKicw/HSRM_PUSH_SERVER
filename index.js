@@ -10,4 +10,4 @@ app.get('/response', function(req, res) {
     res.send("HI");
   });
 
-app.listen(3000, () => console.log(`Example app listening on port 3000!`))
+app.listen(process.env.PORT || 5000)
