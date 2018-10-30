@@ -111,8 +111,8 @@ app.post('/',function(req,res){
 });
 
 app.post('/response',function(req,res){
-    let request = req.body;
-    console.log(request);
+    let request = JSON.stringify(req.body);
+    request = JSON.parse(request);
     const appresponse = new AppResponse({
         _id: new mongoose.Types.ObjectId(),
                 answer: JSON.stringify(request.answer),
@@ -120,7 +120,8 @@ app.post('/response',function(req,res){
                 acceleration: JSON.stringify(request.acceleration),
                 timestamp: JSON.stringify(request.timestamp),
                 gps: JSON.stringify(request.gps),
-                lightsensor: JSON.stringify(request.lightsensor),
+                lightsensor: JSON.stringify(request.lightsensor.intensity),
+                uuid: JSON.stringify(request.uuid),
     });
 
     appresponse.save()

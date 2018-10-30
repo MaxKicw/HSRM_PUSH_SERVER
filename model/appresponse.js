@@ -7,7 +7,8 @@ const appresponse = mongoose.Schema({
     acceleration: String,
     timestamp: String,
     gps: String,
-    lightsensor: Boolean,
+    lightsensor: String,
+    uuid: String,
 });
 
 module.exports = mongoose.model('AppResponse',appresponse);
