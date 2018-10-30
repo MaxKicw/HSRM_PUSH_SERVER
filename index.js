@@ -111,8 +111,7 @@ app.post('/',function(req,res){
 });
 
 app.post('/response',function(req,res){
-    console.log(req);
-    let request = JSON.stringify(req.body.data);
+    let request = JSON.stringify(req.body);
     console.log(request);
     const appresponse = new AppResponse({
         _id: new mongoose.Types.ObjectId(),
