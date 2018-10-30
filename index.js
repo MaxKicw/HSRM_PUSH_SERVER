@@ -9,7 +9,7 @@ const jwt = require('jsonwebtoken');
 var url = "mongodb://hsrm:hsrmpushdb1@ds145463.mlab.com:45463/mydb";
 
 
-mongoose.connect(url,{useMongoClient: true});
+mongoose.connect(url,{useNewUrlParser: true});
 
 
 app.use(bodyParser.urlencoded({extended:false}));
