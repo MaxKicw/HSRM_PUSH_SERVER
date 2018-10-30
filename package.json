@@ -10,6 +10,8 @@
   "author": "maxkicw <m142679@googlemail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.7"
   }
 }
